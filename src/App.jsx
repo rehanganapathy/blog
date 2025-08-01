@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 
 // Components
-import CursorDot from './components/CursorDot';
+//import CursorDot from './components/CursorDot';
 import Preloader from './components/Preloader';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
 // Pages
 import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
+import AboutKrish from './pages/AboutKrish';
+import AboutRehan from './pages/AboutRehan';
 import AnalysisPage from './pages/AnalysisPage';
 import ResearchPage from './pages/ResearchPage';
 import ContactPage from './pages/ContactPage';
@@ -29,8 +30,10 @@ const App = () => {
 
   const renderPage = () => {
     switch (currentPage) {
-      case 'about':
-        return <AboutPage />;
+      case 'about-krish':
+        return <AboutKrish />;
+      case 'about-rehan':
+        return <AboutRehan />;
       case 'streettalk':
         return <AnalysisPage />;
       case 'research':
@@ -48,7 +51,7 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-white text-neutral-800">
-      <CursorDot mousePosition={mousePosition} />
+      {/* <CursorDot mousePosition={mousePosition} /> */}
       <Navigation
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}

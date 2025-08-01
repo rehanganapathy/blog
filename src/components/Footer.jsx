@@ -5,7 +5,7 @@ const Footer = () => (
         <div className="max-w-6xl mx-auto px-6">
             <div className="text-center">
                 <div className="mb-12">
-                    <span className="text-2xl font-light tracking-wider text-white">INSIGHT</span>
+                    <span className="text-2xl font-light tracking-wider text-white">1BasisPoint</span>
                 </div>
 
                 <div className="border-t border-neutral-700 pt-12">
@@ -20,7 +20,7 @@ const Footer = () => (
 
                 <div className="border-t border-neutral-700 pt-8 mt-8">
                     <p className="text-neutral-500 text-xs tracking-wide">
-                        © 2025 Financial Insight. All rights reserved.
+                        © 2025 1BasisPoint.
                     </p>
                 </div>
             </div>

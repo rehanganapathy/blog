@@ -1,16 +1,17 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import StockTicker from '../components/StockTicker';
 
 const HomePage = ({ setCurrentPage }) => (
     <div className="pt-20">
+        {/* Stock Ticker */}
+        <StockTicker />
+
         {/* Hero Section */}
-        <section className="min-h-screen flex items-center justify-center bg-white">
+        <section className="min-h-screen flex items-center justify-center bg-neutral-100">
             <div className="text-center max-w-4xl mx-auto px-6">
-                <h1 className="text-6xl md:text-8xl font-extralight text-neutral-800 mb-8 tracking-tight leading-none">
-                    Financial
-                    <span className="block font-light italic text-neutral-600">
-                        Intelligence
-                    </span>
+                <h1 className="text-6xl md:text-8xl font-poppins font-extralight text-neutral-800 mb-8 tracking-tight leading-none">
+                    1BasisPoint
                 </h1>
                 <p className="text-lg md:text-xl text-neutral-500 mb-12 max-w-2xl mx-auto leading-relaxed font-light">
                     Clear insights for complex financial landscapes.
@@ -63,7 +64,6 @@ const HomePage = ({ setCurrentPage }) => (
                         </div>
                         <h3 className="text-lg font-light text-neutral-800 mb-4 tracking-wide">Expert Insight</h3>
                         <p className="text-neutral-500 leading-relaxed font-light">
-                            Decades of combined experience in markets, policy, and financial analysis.
                         </p>
                     </div>
                 </div>

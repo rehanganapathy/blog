@@ -17,7 +17,7 @@ const ContactPage = () => (
                                 <Mail className="w-5 h-5 text-neutral-600 mt-1" />
                                 <div>
                                     <p className="text-neutral-800 font-light">Email</p>
-                                    <p className="text-neutral-600 text-sm">insights@financial-insight.com</p>
+                                    <p className="text-neutral-600 text-sm"></p>
                                 </div>
                             </div>
                             <div className="flex items-start space-x-4">

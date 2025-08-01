@@ -4,19 +4,13 @@ const AboutPage = () => (
     <div className="pt-32 pb-24 bg-white min-h-screen">
         <div className="max-w-4xl mx-auto px-6">
             <h1 className="text-5xl font-extralight text-neutral-800 mb-20 text-center tracking-tight">
-                About
+                Krish Lohia
             </h1>
 
             <div className="space-y-24">
                 {[
                     {
-                        name: "Alexandra Thompson",
-                        role: "Market Strategist",
-                        bio: "Fifteen years analyzing global markets with a focus on quantitative strategies and risk management. Previously with Goldman Sachs' quantitative research division.",
-                        focus: "Algorithmic trading, emerging markets, derivatives"
-                    },
-                    {
-                        name: "David Chen",
+                        name: "Rehan Ganapathy",
                         role: "Economic Analyst",
                         bio: "PhD Economics, MIT. Former Federal Reserve researcher specializing in monetary policy and macroeconomic forecasting. Published extensively on central banking.",
                         focus: "Monetary policy, inflation dynamics, fixed income"
