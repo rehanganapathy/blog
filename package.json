@@ -10,10 +10,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^16.1.0",
+    "@sanity/client": "^7.8.1",
+    "@sanity/preview-url-secret": "^2.1.14",
+    "@sanity/visual-editing": "^3.0.1",
+    "contentful": "^11.7.15",
     "lucide-react": "^0.535.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-type-animation": "^3.2.0"
+    "react-router-dom": "^7.7.1",
+    "react-type-animation": "^3.2.0",
+    "sanity": "^4.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.12",

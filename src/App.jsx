@@ -1,7 +1,8 @@
+// App.jsx
 import React, { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom'; // ✅ Only import Routes, Route (no Router)
 
 // Components
-//import CursorDot from './components/CursorDot';
 import Preloader from './components/Preloader';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -13,37 +14,16 @@ import AboutRehan from './pages/AboutRehan';
 import AnalysisPage from './pages/AnalysisPage';
 import ResearchPage from './pages/ResearchPage';
 import ContactPage from './pages/ContactPage';
-
-// Hooks
-import useMousePosition from './hooks/useMousePosition';
+import PostPage from './pages/PostPage';
 
 const App = () => {
-  const [currentPage, setCurrentPage] = useState('home');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const mousePosition = useMousePosition();
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoading(false), 2000);
     return () => clearTimeout(timer);
   }, []);
-
-  const renderPage = () => {
-    switch (currentPage) {
-      case 'about-krish':
-        return <AboutKrish />;
-      case 'about-rehan':
-        return <AboutRehan />;
-      case 'streettalk':
-        return <AnalysisPage />;
-      case 'research':
-        return <ResearchPage />;
-      case 'contact':
-        return <ContactPage />;
-      default:
-        return <HomePage setCurrentPage={setCurrentPage} />;
-    }
-  };
 
   if (isLoading) {
     return <Preloader />;
@@ -51,14 +31,16 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-white text-neutral-800">
-      {/* <CursorDot mousePosition={mousePosition} /> */}
-      <Navigation
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-        isMenuOpen={isMenuOpen}
-        setIsMenuOpen={setIsMenuOpen}
-      />
-      {renderPage()}
+      <Navigation isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about-krish" element={<AboutKrish />} />
+        <Route path="/about-rehan" element={<AboutRehan />} />
+        <Route path="/streettalk" element={<AnalysisPage />} />
+        <Route path="/analysis/:slug" element={<PostPage />} />
+        <Route path="/research" element={<ResearchPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
       <Footer />
     </div>
   );
